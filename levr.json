@@ -1,0 +1,119 @@
+{
+  "version": "2.0",
+  "schemaVersion": "2.1",
+  "siteId": "knHUuMvx2r",
+  "name": "techstartup-techstar",
+  "description": "Tech startup website",
+  "siteType": "one-page",
+  "colorScheme": "sage",
+  "font": "Inter",
+  "tags": [
+    "SaaS Solutions",
+    "Tech Entrepreneurship",
+    "Software Innovation",
+    "Startup Ecosystem",
+    "Digital Transformation"
+  ],
+  "tools": [
+    {
+      "name": "ROI Calculator",
+      "description": "An interactive tool that allows potential clients to estimate the financial return and efficiency gains from implementing the startup's tech solutions."
+    },
+    {
+      "name": "Project Scalability Estimator",
+      "description": "A dynamic quiz or calculator that helps businesses determine the infrastructure and resources needed to scale their current technology stack."
+    }
+  ],
+  "credentialSetId": "",
+  "model": "gemini-3-flash-preview",
+  "customHtml": false,
+  "createdAt": 1767694537666,
+  "updatedAt": 1767694537666,
+  "buildMetadata": {
+    "levrVersion": "0.5.6",
+    "templateVersion": "2.0.0",
+    "templateType": "site",
+    "promptVersions": {
+      "html": "2.0.0",
+      "tags": "2.0.0"
+    },
+    "workflowVersions": {
+      "deploy": "1.2.0"
+    },
+    "buildTimestamp": 1767694537666,
+    "buildId": "knHUuMvx2r",
+    "model": "gemini-3-flash-preview",
+    "modelProvider": "gemini",
+    "modelInfo": {
+      "name": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "family": "gemini-3",
+      "version": "3",
+      "variant": "flash"
+    }
+  },
+  "source": {
+    "github": {
+      "owner": "xndr-tech",
+      "repo": "techstartup-techstar-knHUuMvx",
+      "branch": "main",
+      "url": "https://github.com/xndr-tech/techstartup-techstar-knHUuMvx"
+    },
+    "cloudflare": {
+      "accountId": "b6af5ded35131641c4ebe125bbbf0250",
+      "workerName": "techstartup-techstar-knHUuMvx",
+      "subdomain": "",
+      "previewUrl": ""
+    },
+    "credentialSetId": ""
+  },
+  "buildHistory": [
+    {
+      "buildId": "knHUuMvx2r",
+      "timestamp": 1767694537666,
+      "type": "initial",
+      "model": "gemini-3-flash-preview",
+      "levrVersion": "0.5.6",
+      "success": true
+    }
+  ],
+  "wranglerVersion": "2.0.0",
+  "filesVersion": "1.1.0",
+  "workflows": {
+    "version": "1.0.0",
+    "levrVersion": "0.5.6",
+    "modules": {
+      "deploy": {
+        "enabled": true,
+        "version": "1.2.0",
+        "file": "deploy.yml"
+      },
+      "preview": {
+        "enabled": true,
+        "version": "1.2.0",
+        "file": "preview.yml"
+      },
+      "qa": {
+        "enabled": true,
+        "version": "1.1.0",
+        "file": "qa.yml"
+      },
+      "seo": {
+        "enabled": false,
+        "version": "1.1.0",
+        "file": "seo.yml"
+      },
+      "lighthouse": {
+        "enabled": false,
+        "version": "1.1.0",
+        "file": "lighthouse.yml"
+      },
+      "security": {
+        "enabled": false,
+        "version": "1.0.0",
+        "file": "security.yml"
+      }
+    },
+    "generatedAt": 1767694537666
+  }
+}
