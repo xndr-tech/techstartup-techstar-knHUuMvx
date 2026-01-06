@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techstar - Innovating the Future</title>
+    <title>TechStar - Innovate, Create, Inspire</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,47 +11,39 @@
         :root {
             --primary-color: #8ecfad;
             --text-color: #333;
-            --light-gray: #f4f4f4;
-            --dark-gray: #555;
+            --background-color: #f9f9f9;
             --white: #fff;
-            --font-family-inter: 'Inter', sans-serif;
+            --light-gray: #eee;
+            --dark-gray: #555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: var(--font-family-inter);
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            color: var(--dark-gray);
-            margin-top: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-        }
-
-        a:hover {
-            text-decoration: underline;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
-        /* Header */
         header {
             background-color: var(--white);
             padding: 20px 0;
-            border-bottom: 1px solid var(--light-gray);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header .container {
@@ -64,12 +56,11 @@
             font-size: 1.8em;
             font-weight: 700;
             color: var(--primary-color);
+            text-decoration: none;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
         }
 
@@ -78,6 +69,7 @@
         }
 
         nav ul li a {
+            text-decoration: none;
             color: var(--dark-gray);
             font-weight: 500;
             transition: color 0.3s ease;
@@ -85,250 +77,222 @@
 
         nav ul li a:hover {
             color: var(--primary-color);
-            text-decoration: none;
         }
 
-        /* Hero Section */
         .hero {
-            background-color: var(--light-gray);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x900/?technology,startup,futuristic') no-repeat center center/cover;
+            color: var(--white);
             text-align: center;
-            padding: 100px 20px;
-            background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://via.placeholder.com/1920x600/f0f0f0/cccccc?text=Techstar+Background'); /* Placeholder image */
-            background-size: cover;
-            background-position: center;
+            padding: 150px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
         }
 
         .hero h1 {
             font-size: 3.5em;
             margin-bottom: 20px;
-            color: var(--text-color);
             font-weight: 700;
+            max-width: 800px;
         }
 
         .hero p {
-            font-size: 1.25em;
-            color: var(--dark-gray);
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            font-weight: 300;
         }
 
-        .btn {
+        .button {
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--white);
             padding: 15px 30px;
+            text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             border: none;
             cursor: pointer;
             font-size: 1em;
         }
 
-        .btn:hover {
-            background-color: #79bf97; /* Slightly darker primary */
-            text-decoration: none;
+        .button:hover {
+            background-color: #79c5a0; /* Slightly darker primary */
+            transform: translateY(-2px);
         }
 
-        /* Features Section */
-        .features {
+        section {
             padding: 80px 0;
-            background-color: var(--white);
             text-align: center;
         }
 
-        .features h2 {
+        section h2 {
             font-size: 2.5em;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
+            color: var(--text-color);
             font-weight: 700;
         }
 
-        .feature-cards {
+        .features {
+            background-color: var(--white);
+        }
+
+        .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
 
         .feature-card {
-            background-color: var(--white);
-            border: 1px solid var(--light-gray);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            background-color: var(--light-gray);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: left;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card .icon {
             font-size: 2.5em;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: block;
         }
 
         .feature-card h3 {
             font-size: 1.5em;
             margin-bottom: 15px;
-            color: var(--dark-gray);
+            color: var(--text-color);
             font-weight: 600;
         }
 
         .feature-card p {
+            font-size: 1em;
             color: var(--dark-gray);
-            font-size: 0.95em;
         }
 
-        /* About Section */
         .about {
-            padding: 80px 0;
-            background-color: var(--light-gray);
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            font-weight: 700;
+            background-color: var(--background-color);
         }
 
         .about p {
-            font-size: 1.1em;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto 20px auto;
+            font-size: 1.1em;
             color: var(--dark-gray);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background-color: var(--white);
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            font-weight: 700;
         }
 
         .contact-form {
+            background-color: var(--white);
+        }
+
+        .contact-form form {
             max-width: 600px;
             margin: 0 auto;
-            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            background-color: var(--light-gray);
+        }
+
+        .contact-form label {
             text-align: left;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--dark-gray);
         }
 
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: calc(100% - 20px);
-            padding: 12px;
-            border: 1px solid var(--light-gray);
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            font-family: var(--font-family-inter);
+            font-family: 'Inter', sans-serif;
             font-size: 1em;
-            color: var(--dark-gray);
-            transition: border-color 0.3s ease;
         }
 
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        .form-group textarea {
+        .contact-form textarea {
             resize: vertical;
             min-height: 120px;
         }
 
-        .contact-form .btn {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.1em;
+        .contact-form button {
+            align-self: flex-start;
+            margin-top: 10px;
         }
 
-        /* Footer */
         footer {
-            background-color: var(--dark-gray);
+            background-color: var(--text-color);
             color: var(--white);
             padding: 40px 0;
             text-align: center;
             font-size: 0.9em;
         }
 
-        footer .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         footer p {
-            margin: 0 0 15px 0;
+            margin-bottom: 10px;
         }
 
-        footer .footer-links a {
-            color: var(--white);
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-
-        footer .footer-links a:hover {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Responsive adjustments */
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+
             .hero h1 {
                 font-size: 2.5em;
             }
+
             .hero p {
-                font-size: 1em;
+                font-size: 1.1em;
             }
-            nav ul {
-                flex-direction: column;
-                margin-top: 20px;
+
+            section {
+                padding: 60px 0;
             }
-            nav ul li {
-                margin: 10px 0;
+
+            section h2 {
+                font-size: 2em;
             }
-            .header .container {
-                flex-direction: column;
-            }
-            .feature-cards {
+
+            .feature-grid {
                 grid-template-columns: 1fr;
             }
-            .contact-form {
-                padding: 25px;
+
+            .contact-form form {
+                padding: 30px;
             }
-            .form-group input[type="text"],
-            .form-group input[type="email"],
-            .form-group textarea {
-                width: 100%; /* Adjust for mobile */
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
             }
         }
     </style>
@@ -336,10 +300,10 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">Techstar</div>
+            <a href="#" class="logo">TechStar</a>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -349,32 +313,32 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="hero" class="hero">
             <div class="container">
-                <h1>Innovating Tomorrow's Technology, Today.</h1>
-                <p>Empowering businesses with cutting-edge solutions for a smarter, more connected world.</p>
-                <a href="#features" class="btn">Discover Our Solutions</a>
+                <h1>Innovate. Create. Inspire.</h1>
+                <p>Building the future of technology, one groundbreaking solution at a time.</p>
+                <a href="#contact" class="button">Get Started</a>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2>Solutions Designed for Your Success</h2>
-                <div class="feature-cards">
+                <h2>Our Core Features</h2>
+                <div class="feature-grid">
                     <div class="feature-card">
                         <span class="icon">💡</span>
-                        <h3>Scalable Cloud Solutions</h3>
-                        <p>Flexible, secure, and robust cloud infrastructure to grow seamlessly with your business demands.</p>
+                        <h3>Intuitive Solutions</h3>
+                        <p>Seamlessly integrate powerful tools into your workflow designed for peak efficiency and ease of use.</p>
                     </div>
                     <div class="feature-card">
-                        <span class="icon">🧠</span>
-                        <h3>AI-Powered Analytics</h3>
-                        <p>Unlock deep, actionable insights from your data with our advanced artificial intelligence algorithms.</p>
+                        <span class="icon">🚀</span>
+                        <h3>Future-Proof Technology</h3>
+                        <p>Stay ahead of the curve with cutting-edge innovations engineered to evolve with tomorrow's challenges.</p>
                     </div>
                     <div class="feature-card">
-                        <span class="icon">🔗</span>
-                        <h3>Seamless Integration</h3>
-                        <p>Effortlessly connect our platforms with your existing systems for maximum efficiency and minimal disruption.</p>
+                        <span class="icon">🤝</span>
+                        <h3>Collaborative Ecosystems</h3>
+                        <p>Empower your team with platforms that foster creativity, enhance communication, and drive collective success.</p>
                     </div>
                 </div>
             </div>
@@ -382,29 +346,26 @@
 
         <section id="about" class="about">
             <div class="container">
-                <h2>About Techstar</h2>
-                <p>At Techstar, we believe in the power of innovation to transform industries. Founded on the principle of solving complex problems with elegant technological solutions, we are a team of passionate engineers, designers, and strategists dedicated to pushing the boundaries of what's possible.</p>
-                <p>Our journey began with a vision to create a future where technology serves humanity more effectively, making processes simpler, data more accessible, and businesses more agile. We partner with forward-thinking organizations to build bespoke solutions that don't just meet today's demands but anticipate tomorrow's challenges.</p>
+                <h2>About TechStar</h2>
+                <p>TechStar is a visionary tech startup dedicated to crafting innovative solutions that empower businesses and individuals alike. Founded on the principle of pushing technological boundaries, we believe in creating products that are not just functional, but truly transformative. Our mission is to simplify complexity and unlock new potentials through intelligent design and robust engineering.</p>
+                <p>Our passionate team of engineers, designers, and strategists are committed to excellence, constantly striving to deliver robust, user-friendly, and scalable platforms. We are more than just a software company; we are partners in your journey towards a more efficient, connected, and inspired future. Join us as we redefine what's possible.</p>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact-form">
             <div class="container">
-                <h2>Get In Touch</h2>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
+                <h2>Get in Touch</h2>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit" class="button">Send Message</button>
                 </form>
             </div>
         </section>
@@ -412,12 +373,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Techstar. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Careers</a>
-            </div>
+            <p>&copy; 2023 TechStar. All rights reserved.</p>
+            <p>Innovate. Create. Inspire.</p>
         </div>
     </footer>
 </body>
